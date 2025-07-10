@@ -5,7 +5,7 @@ import myImage1 from "../assets/bg-div.jpg"
 
 const CustomerPortal = () => {
     return (
-        <div>
+        <div className='w-full'>
             <NavBarCustomer />
             <div id='splash'  className="w-full min-h-[calc(100vh-155px)] flex flex-col lg:flex-row items-center justify-center px-4
              bg-none lg:bg-[url('/src/assets/bg-div.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">

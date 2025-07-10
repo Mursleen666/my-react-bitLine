@@ -3,7 +3,7 @@ import logo from "../assets/myLogo.svg"
 
 const NavBarCustomer = () => {
   return (
-    <div id='header' className='h-[100px] border-b-2 lg:h-[70px]  '>
+    <div id='header' className='h-[100px] border-b-2 lg:h-[70px]'>
       <div className='px-[38px] py-2 justify-between flex' id='innerheader'>
         <div id='logo'>
             <img className='w-48 lg:w-36' src={logo} alt="" />
