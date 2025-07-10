@@ -5,7 +5,7 @@ import myImage1 from "../assets/bg-div.jpg"
 
 const CustomerPortal = () => {
     return (
-        <div className='w-full'>
+        <div className=''>
             <NavBarCustomer />
             <div id='splash'  className="w-full min-h-[calc(100vh-155px)] flex flex-col lg:flex-row items-center justify-center px-4
              bg-none lg:bg-[url('/src/assets/bg-div.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
@@ -31,7 +31,7 @@ const CustomerPortal = () => {
                                     <div id="formField"><input className='bg-[#f5f5f5] rounded-[3px] font-Open Sans text-[1.0em] h-16  lg:h-[48px] py-[10px] px-[15px] w-full max-w-[600px] ' type="text" inputMode='email' maxLength={200} /></div>
                                 </div>
                                 <div className='text-black '>
-                                    <div className='mb-3 mt-6 sm:mb-9 font-semibold' id='label'><label htmlFor="">Password</label></div>
+                                    <div className='mt-11 lg:mt-6 font-semibold' id='label'><label htmlFor="">Password</label></div>
                                     <div id="formField"><input className='bg-[#f5f5f5] rounded-[3px] font-Open Sans text-[1.0em] h-16  lg:h-[48px] py-[10px] px-[15px] w-full max-w-[600px] ' type="text" inputMode='email' maxLength={200} /></div>
                                 </div>
                                 <div className='flex items-center justify-between sm:mb-9 mt-6'>
@@ -41,7 +41,7 @@ const CustomerPortal = () => {
                                     </div>
                                     <a className='underline text-[1.1em] lg:text-[1em]' href="#">Forgotten Password</a>
                                 </div>
-                                <button className='bg-[#d71c5c] rounded-full text-white  text-[1.4em] lg:text-[1em] h-16  lg:h-[48px] w-[600px] mt-9 sm:mt-12 ' type='submit'>Sign In</button>
+                                <button className='bg-[#d71c5c] rounded-full text-white  text-[1.4em] lg:text-[1em] h-16  lg:h-[48px] w-[600px] lg:mt-3 mt-[120px] ' type='submit'>Sign In</button>
                                 <div className='flex gap-1 justify-center mt-8 sm:mt-11 text-[1.2em] lg:text-[1em]'>
                                     <span >
                                         No account?
