@@ -2,14 +2,19 @@ import React from 'react'
 import NavBarCustomer from '../components/NavBarCustomer'
 import Footer from '../components/Footer'
 import myImage1 from "../assets/bg-div.jpg"
+import RegisterForm from '../components/RegisterForm'
+import { useState } from 'react';
 
 const CustomerPortal = () => {
+    const [isRegistering, setIsRegistering] = useState(false);
+
     return (
         <div className=''>
-            <NavBarCustomer />
+          <NavBarCustomer onRegisterClick={() => setIsRegistering(true)} />
+
             <div id='splash'  className="w-full min-h-[calc(100vh-155px)] flex flex-col lg:flex-row items-center justify-center px-4
              bg-none lg:bg-[url('/src/assets/bg-div.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
-                <div className='hidden lg:block ml-0 lg:ml-48 text-white leading-[62px]' id='splashLeft'>
+                <div className='hidden lg:block ml-0 lg:ml-35 text-white leading-[62px]' id='splashLeft'>
                     <h1 className='font-bold text-[50px]'>POWERFUL, SMART, READY!</h1>
                     <h2 className='font-bold text-[30px]'>Casino transactions via crypto assets</h2>
                     <div>
@@ -20,7 +25,12 @@ const CustomerPortal = () => {
                         </p>
                     </div>
                 </div>
-                <div className='mt-52 lg:mt-0 bg-white rounded-[3px] py-[40px] px-[30px] ml-72 ' id='splashRight'>
+            {isRegistering ? (
+  <div className="mt-52 lg:mt-0 bg-white rounded-[3px] py-[40px] px-[30px] ml-10" id='registerForm'>
+    <RegisterForm />
+  </div>
+) : (
+  <div className='mt-52 lg:mt-0 bg-white rounded-[3px] py-[40px] px-[30px] ml-72 ' id='splashRight'>
                     <form className='flex flex-col lg:flex-row' action="">
                         <div>
                             <h1 className='font-semibold mb-5 text-[40px]'>Sign In</h1>
@@ -52,6 +62,9 @@ const CustomerPortal = () => {
                         </div>
                     </form>
                 </div>
+            
+)}
+
             </div>
             <Footer />
         </div>
