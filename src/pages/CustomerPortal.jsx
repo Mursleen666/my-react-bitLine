@@ -56,7 +56,14 @@ const CustomerPortal = () => {
                                     <span >
                                         No account?
                                     </span>
-                                    <a className='underline' href="#">Register</a>
+                                   <button
+  type="button"
+  onClick={() => setIsRegistering(true)}
+  className="underline text-blue-600"
+>
+  Register
+</button>
+
                                 </div>
                             </div>
                         </div>

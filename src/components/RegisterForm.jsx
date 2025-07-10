@@ -7,7 +7,7 @@ const RegisterForm = () => {
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
   return (
-    <div className="w-full max-w-md p-6 bg-slate-50" id="formContainer">
+    <div className="w-[550px] max-w-md p-6 min-h-[550px]  bg-slate-50" id="formContainer">
       {/* Step Indicator */}
       <div className="relative mb-6">
         <div className="absolute top-4 left-0 w-full h-0.5 bg-gray-300 z-0"></div>
@@ -61,7 +61,7 @@ const RegisterForm = () => {
       {step === 3 && (
         <form className="space-y-4">
           <p className="text-gray-700 text-sm mb-2">Enter the code sent to your email address</p>
-          <input type="text" maxLength="6" placeholder="Your verification code" className="w-full p-2 border rounded tracking-widest text-center" />
+          <input type="text" maxLength="6" placeholder=".   .   .   .   ." className="w-full p-2 border rounded tracking-widest text-center" />
           <div className="text-right text-sm text-blue-700 underline cursor-pointer">Resend code</div>
           <button type="submit" className="w-full bg-pink-700 text-white py-2 rounded-full">Submit</button>
           <button type="button" onClick={prevStep} className="w-full border mt-2 py-2 rounded-full">Back</button>
