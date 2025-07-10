@@ -14,7 +14,7 @@ const CustomerPortal = () => {
 
             <div id='splash' className="w-full min-h-[calc(100vh-155px)] flex flex-col lg:flex-row items-center justify-center px-4
              bg-none lg:bg-[url('/src/assets/bg-div.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
-                <div className='hidden lg:block ml-0 lg:ml-35 text-white leading-[62px]' id='splashLeft'>
+                <div className='hidden lg:block ml-0 lg:ml-36 text-white leading-[62px]' id='splashLeft'>
                     <h1 className='font-bold text-[50px]'>POWERFUL, SMART, READY!</h1>
                     <h2 className='font-bold text-[30px]'>Casino transactions via crypto assets</h2>
                     <div>
@@ -26,12 +26,12 @@ const CustomerPortal = () => {
                     </div>
                 </div>
                 {isRegistering ? (
-                  <div
-  id="registerForm"
-  className="w-full max-w-[550px] mx-auto mt-9 lg:mt-0 bg-white rounded-[3px] py-10 px-4 sm:px-6"
->
-  <RegisterForm />
-</div>
+                    <div
+                        id="registerForm"
+                        className="w-full max-w-[550px] mx-auto mt-9 lg:mt-0 bg-white rounded-[3px] py-10 px-4 sm:px-6"
+                    >
+                        <RegisterForm />
+                    </div>
 
                 ) : (
                     <div className=' lg:mt-0 bg-white rounded-[3px] py-8 px-4 lg:py-[40px] lg:px-[30px] mx-auto w-full max-w-xl' id='splashRight'>
