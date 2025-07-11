@@ -1,16 +1,36 @@
 import React from 'react'
 import NavBarCustomer from '../components/NavBarCustomer'
 import Footer from '../components/Footer'
-import myImage1 from "../assets/bg-div.jpg"
 import RegisterForm from '../components/RegisterForm'
 import { useState } from 'react';
+import axios from "axios"
 
-const CustomerPortal = () => {
+const CustomerPortal = ({ setToken }) => {
+    const backEndUrl = "http://localhost:8000"
     const [isRegistering, setIsRegistering] = useState(false);
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const onSubmitHandler = async (e) => {
+        try {
+            e.preventDefault()
+            const response = await axios.post(backEndUrl + "/api/user/admin", { email, password })
+            if (response.data.success) {
+                const token = response.data.token
+                setToken(token)
+                localStorage.setItem("token", token);
 
+            }
+            else {
+                console.log("Invalid")
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
     return (
         <div className=''>
-            <NavBarCustomer onRegisterClick={() => setIsRegistering(true)} />
+            <NavBarCustomer goToLogin={() => setIsRegistering(false)} onRegisterClick={() => setIsRegistering(true)} onSignInClick={() => setIsRegistering(false)} />
+
 
             <div id='splash' className="w-full min-h-[calc(100vh-155px)] flex flex-col lg:flex-row items-center justify-center px-4
              bg-none lg:bg-[url('/src/assets/bg-div.jpg')] lg:bg-cover lg:bg-center lg:bg-no-repeat">
@@ -35,7 +55,7 @@ const CustomerPortal = () => {
 
                 ) : (
                     <div className=' lg:mt-0 bg-white rounded-[3px] py-8 px-4 lg:py-[40px] lg:px-[30px] mx-auto w-full max-w-xl' id='splashRight'>
-                        <form className='flex flex-col' action="">
+                        <form className='flex flex-col' onSubmit={onSubmitHandler} action="">
                             <h1 className='font-semibold mb-5 text-3xl lg:text-[40px]'>Sign In</h1>
                             <p className='text-[#505050] leading-10 text-[16px]'>Enter your details below</p>
 
@@ -44,6 +64,8 @@ const CustomerPortal = () => {
                                 <div className='text-black'>
                                     <label htmlFor="email" className='block mb-2 font-semibold'>Email Address</label>
                                     <input
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        value={email}
                                         id="email"
                                         className='bg-[#f5f5f5] rounded-[3px] font-Open Sans text-[1em] h-12 lg:h-[48px] py-2 px-4 w-full'
                                         type="email"
@@ -55,6 +77,8 @@ const CustomerPortal = () => {
                                 <div className='text-black'>
                                     <label htmlFor="password" className='block mb-2 font-semibold'>Password</label>
                                     <input
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        value={password}
                                         id="password"
                                         className='bg-[#f5f5f5] rounded-[3px] font-Open Sans text-[1em] h-12 lg:h-[48px] py-2 px-4 w-full'
                                         type="password"
@@ -73,10 +97,9 @@ const CustomerPortal = () => {
 
                                 {/* Sign In Button */}
                                 <button
-                                    className='bg-[#d71c5c] rounded-full text-white text-lg h-12 lg:h-[48px] w-full mt-8'
-                                    type='submit'
-                                >
-                                    Sign In
+                                    type="submit"
+                                    className='w-auto h-[50px]  text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] mr-[10px]'>
+                                    Sign in
                                 </button>
 
                                 {/* Register link */}
