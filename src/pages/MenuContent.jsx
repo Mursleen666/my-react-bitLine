@@ -1,12 +1,11 @@
 import { LogIn, UserPlus, Menu } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import NavBar from "../components/NavBar";
-import LoginSignUpFooter from "../components/LoginSignUpFooter";
+import NavBarCustomer from "../components/NavBarCustomer";
 
 const MenuContent = () => {
     return (
         <>
-            <NavBar />
+            <NavBarCustomer />
             <div className=" min-h-screen pb-20 bg-white">
 
 
