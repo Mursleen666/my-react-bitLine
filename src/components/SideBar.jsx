@@ -21,8 +21,8 @@ const SideBar = () => {
                     <p className='hidden md:block'>Transfer</p>
                 </NavLink>
             
-                <button className='w-[200px] h-[40px] border-[1px] text-white text-[13px] font-semibold  border-[#283382] bg-[#283382] ml-2 mt-6 rounded-full px-[20px] hover:bg-blue-800 '>Deposit Crypto</button>
-                <button className='w-[200px] h-[40px] border-[1px] text-[#283382] text-[13px] font-semibold border-[#283382] ml-2 mt-2 bg-transparent rounded-full px-[20px] '>Create Transaction</button>
+                <button className='w-[200px] h-[40px] border-[1px] text-white text-[13px] font-semibold  border-[#283382] bg-[#283382] ml-7 mt-6 rounded-full px-[20px] hover:bg-blue-800 '>Deposit Crypto</button>
+                <button className='w-[200px] h-[40px] border-[1px] text-[#283382] text-[13px] font-semibold border-[#283382] ml-7 mt-2 bg-transparent rounded-full px-[20px] '>Create Transaction</button>
              
             </div>
         </div>

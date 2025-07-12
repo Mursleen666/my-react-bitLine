@@ -100,7 +100,7 @@ const CustomerPortal = ({ setToken }) => {
                                 {/* Sign In Button */}
                                 <button
                                     type="submit"
-                                    className='w-auto h-[50px] ml-24  text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] mr-[10px]'>
+                                    className='w-auto h-[50px] ml-30  text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] mr-[10px]'>
                                     Sign in
                                 </button>
 
