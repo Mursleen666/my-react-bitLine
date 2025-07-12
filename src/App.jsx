@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import MobileFooter from './components/FooterMobile'
 import MenuContent from './pages/MenuContent'
 import LoginSignUpFooter from './components/LoginSignUpFooter'
+import Footer from './components/Footer'
 
 const App = () => {
   const [token, setToken] = useState("")
@@ -45,7 +46,7 @@ const App = () => {
               </Routes>
             </div>
           </div>
-
+          <Footer/>
           <MobileFooter />
         </>
       )}
