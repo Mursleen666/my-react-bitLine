@@ -4,6 +4,8 @@ import Footer from '../components/Footer'
 import RegisterForm from '../components/RegisterForm'
 import { useState } from 'react';
 import axios from "axios"
+import MobileFooter from '../components/LoginSignUpFooter';
+import LoginSignUpFooter from '../components/LoginSignUpFooter';
 
 const CustomerPortal = ({ setToken }) => {
     const backEndUrl = "http://localhost:8000"
@@ -98,7 +100,7 @@ const CustomerPortal = ({ setToken }) => {
                                 {/* Sign In Button */}
                                 <button
                                     type="submit"
-                                    className='w-auto h-[50px]  text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] mr-[10px]'>
+                                    className='w-auto h-[50px] ml-24  text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] mr-[10px]'>
                                     Sign in
                                 </button>
 
@@ -121,6 +123,7 @@ const CustomerPortal = ({ setToken }) => {
 
             </div>
             <Footer />
+           <LoginSignUpFooter onRegisterClick={() => setIsRegistering(true)} onSignInClick={() => setIsRegistering(false)}/>
         </div>
     )
 }
