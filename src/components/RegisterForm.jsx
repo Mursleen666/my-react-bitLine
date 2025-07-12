@@ -105,7 +105,7 @@ const RegisterForm = ({ goToLogin }) => {
 
       {/* Step 3 */}
       {step === 3 && (
-        <form className="space-y-4">
+        <form className="space-y-4 mb-4">
           <p className="text-gray-700 text-sm mb-2">Enter the code sent to your email address</p>
           <input type="text" maxLength="6" placeholder=".   .   .   .   ." className="w-full p-2 border rounded tracking-widest text-center" />
           <div className="text-right text-sm text-blue-700 underline cursor-pointer">Resend code</div>

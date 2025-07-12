@@ -89,20 +89,22 @@ const CustomerPortal = ({ setToken }) => {
                                 </div>
 
                                 {/* Remember + Forgot */}
-                                <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between'>
+                                <div className='flex flex-row items-start sm:items-center justify-between'>
                                     <div className='flex items-center'>
                                         <input className='scale-[1.2]' id='remember' type="checkbox" />
                                         <label htmlFor="remember" className='ml-2 text-[1em]'>Remember me</label>
                                     </div>
-                                    <a className='underline text-[1em] mt-3 sm:mt-0' href="#">Forgot Password?</a>
+                                    <a className='underline text-sm lg:text-[1em] lg:mt-3 mt-0' href="#">Forgot Password?</a>
                                 </div>
 
                                 {/* Sign In Button */}
+                                  <div className='flex gap-1 justify-center mt-8 text-[1em]'>
                                 <button
                                     type="submit"
-                                    className='w-auto h-[50px] ml-[184px]  text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] mr-[10px]'>
+                                    className='w-auto h-[50px] text-white font-semibold bg-[#283382] hover:bg-blue-800 rounded-full px-[48px] '>
                                     Sign in
                                 </button>
+                                    </div>
 
                                 {/* Register link */}
                                 <div className='flex gap-1 justify-center mt-8 text-[1em]'>
