@@ -7,7 +7,7 @@ import img2 from "../assets/img16.png"
 
 const SideBar = () => {
     return (
-        <div className='hidden lg:block w-[17%] min-h-screen bg-[#f2f2f2]'>
+        <div className='hidden lg:block w-0 lg:w-[17%] min-h-screen bg-[#f2f2f2]'>
             <div className='flex flex-col  text-[15px]'>
                 <NavLink className="flex gap-3 items-center bg-[#283382] pl-8 py-3" to="/">
                     <p className='hidden text-white text-[18px]  font-bold md:block'>Home</p>
