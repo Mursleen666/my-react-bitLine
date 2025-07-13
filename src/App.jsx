@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div>
-      {token !== "" ? (
+      {token === "" ? (
         <>
           <Routes>
             <Route path="/*" element={<CustomerPortal setToken={setToken} />} />

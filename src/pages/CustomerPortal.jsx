@@ -8,14 +8,14 @@ import MobileFooter from '../components/LoginSignUpFooter';
 import LoginSignUpFooter from '../components/LoginSignUpFooter';
 
 const CustomerPortal = ({ setToken }) => {
-    const backEndUrl = "http://localhost:8000"
+   const backEndUrl = "https://my-backend-bitline-production.up.railway.app";
     const [isRegistering, setIsRegistering] = useState(false);
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const onSubmitHandler = async (e) => {
         try {
             e.preventDefault()
-            const response = await axios.post(backEndUrl + "/api/user/admin", { email, password })
+            const response = await axios.post(`${backEndUrl}/api/user/admin`, { email, password })
             if (response.data.success) {
                 const token = response.data.token
                 setToken(token)
