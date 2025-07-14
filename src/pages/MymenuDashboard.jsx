@@ -1,8 +1,6 @@
-import { LogIn, UserPlus, Menu } from "lucide-react";
-import { NavLink } from "react-router-dom";
-import NavBarCustomer from "../components/NavBarCustomer";
 
-const MenuContentDashboad = () => {
+
+const MymenuDashboard = () => {
     return (
         <>
           
@@ -28,4 +26,4 @@ const MenuContentDashboad = () => {
     );
 };
 
-export default MenuContentDashboad;
+export default MymenuDashboard;

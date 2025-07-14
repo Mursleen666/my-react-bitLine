@@ -12,7 +12,7 @@ import LoginSignUpFooter from './components/LoginSignUpFooter'
 import Footer from './components/Footer'
 import DepositModal from './components/DepositModal'
 import CreateTransactionModal from './components/CreateTransactionModal' // 🆕 import
-import MenuContentDashboad from './pages/menuContentDashboad'
+import MymenuDashboard from './pages/MymenuDashboard'
 
 const App = () => {
   const [token, setToken] = useState("")
@@ -52,7 +52,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/transactions" element={<Transactions />} />
                 <Route path="/transfer" element={<Transfer />} />
-                <Route path="/menuDash" element={<MenuContentDashboad />} />
+                <Route path="/menuDash" element={<MymenuDashboard/>} />
               </Routes>
             </div>
           </div>
