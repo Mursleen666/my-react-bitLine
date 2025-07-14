@@ -122,9 +122,9 @@ const Transaction = () => {
           <div className="max-h-[400px] overflow-y-auto">
             <div className="min-w-[600px]">
               <div className="bg-[#2062A0] text-white font-semibold grid grid-cols-3 p-4">
-                <div>Venue Name</div>
+                <div className="ml-14">Venue Name</div>
                 <div>Create Date</div>
-                <div>Lock Date</div>
+                <div className="ml-16">Lock Date</div>
               </div>
 
               {paginatedVenues.map((venue) => (

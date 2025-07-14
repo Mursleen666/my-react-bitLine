@@ -46,7 +46,7 @@ const MobileFooter = () => {
 
      
       <NavLink
-        to="/more"
+        to="/menuDash"
         className={({ isActive }) =>
           isActive
             ? "flex flex-col items-center text-sm text-[#283382] font-semibold"
