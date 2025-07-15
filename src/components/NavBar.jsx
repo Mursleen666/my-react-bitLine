@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import logo from "../assets/myLogo.svg"
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = ({ token, setToken }) => {
@@ -36,15 +37,16 @@ const NavBar = ({ token, setToken }) => {
                                 <div className="py-2">
                                     <p className="px-4 py-2 text-sm text-gray-700 font-semibold">Ghana Test</p>
                                     <hr className="my-1" />
-                                    <a href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                                        Profile
-                                    </a>
-                                    <a href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                                        Notifications
-                                    </a>
-                                    <a href="#" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
-                                        Security
-                                    </a>
+                                   
+                                    <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to='/profile' >
+                                         Profile
+                                    </NavLink>
+                                      <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to='notifications' >
+                                          Notifications
+                                    </NavLink>  <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to='security' >
+                                         Security
+                                    </NavLink>
+                                   
                                     <hr className="my-1" />
                                     <button
                                         onClick={() => {
