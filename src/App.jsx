@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import DepositModal from './components/DepositModal'
 import CreateTransactionModal from './components/CreateTransactionModal' // 🆕 import
 import MymenuDashboard from './pages/MymenuDashboard'
+import Profile from './pages/Profile'
 
 const App = () => {
   const [token, setToken] = useState("")
@@ -53,6 +54,7 @@ const App = () => {
                 <Route path="/transactions" element={<Transactions />} />
                 <Route path="/transfer" element={<Transfer />} />
                 <Route path="/menuDash" element={<MymenuDashboard/>} />
+                <Route path='/profile' element={<Profile/>} />
               </Routes>
             </div>
           </div>
