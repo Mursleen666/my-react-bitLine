@@ -87,7 +87,7 @@ const HomePage = () => {
     {/* Scrollable Cards */}
     <div
       ref={scrollRef}
-      className="overflow-x-auto flex space-x-4 pl-10 scroll-smooth"
+      className="overflow-x-auto flex space-x-4 pl-0 lg:pl-6 scroll-smooth"
       style={{ scrollbarWidth: "none" }}
     >
       {filteredData.map((card) => (
@@ -125,11 +125,12 @@ const HomePage = () => {
     </div>
 
     {/* Fixed Create Transaction Card */}
-    <div className="hidden lg:block min-w-[270px] w-[270px] h-96 ml-4 shrink-0 bg-[#C9CCE0] rounded-[3px] flex-col justify-center items-center pl-14 p-4">
-      <div> <img src={logoStar} alt="" /> </div>
-      <button className="bg-[#283382] text-white py-2 px-6 mt-10 rounded-full">
+    <div className="flex-col items-center  hidden lg:block min-w-[270px] w-[270px] h-96 ml-4 shrink-0 bg-[#C9CCE0] rounded-[3px] justify-center pl-14 ">
+      <div> <img className="mt-12" src={logoStar} alt="" /> 
+      <button className="bg-[#283382] text-white mr-13 py-2 px-4 mt-10 rounded-full">
         Create Transaction
       </button>
+      </div>
     </div>
   </div>
 

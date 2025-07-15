@@ -66,7 +66,7 @@ const Transaction = () => {
   const handleNextPage = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
 
   return (
-    <div className="p-0 lg:p-6">
+    <div className=" lg:p-6">
       {/* Top Filters */}
       <div className="mb-4 flex flex-col lg:flex-row gap-5 items-start lg:items-center justify-between">
         <div>
@@ -111,7 +111,7 @@ const Transaction = () => {
               setSearchTerm(e.target.value);
               setCurrentPage(1);
             }}
-            className="px-3 py-2 border border-gray-300 rounded-md w-[370px] lg:w-64"
+            className="px-3 py-2 border border-gray-300 rounded-md w-[360px] lg:w-64"
           />
         </div>
       </div>
