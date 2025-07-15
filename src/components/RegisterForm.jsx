@@ -7,7 +7,7 @@ const RegisterForm = ({ goToLogin }) => {
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
   return (
-    <div className="w-full max-w-[550px] min-h-[550px] p-4 pb-16 sm:p-6 rounded" id="formContainer">
+    <div className="w-full max-w-[550px] min-h-[550px] p-4 pb-16 lg:pb-0 sm:p-6 rounded" id="formContainer">
       <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-9">Create Your Account</h1>
 
       {/* Step Indicator */}
