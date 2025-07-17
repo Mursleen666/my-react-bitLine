@@ -10,12 +10,12 @@ const SideBar = ({ openDepositModal, openTransactionModal }) => {
         <p className="hidden text-white text-[18px] font-bold md:block">Home</p>
       </NavLink>
 
-      <NavLink className="flex gap-2 items-center hover:bg-slate-200 font-semibold pl-4 my-3" to="/transactions">
+      <NavLink className="flex gap-2 items-center hover:bg-[#283382] hover:text-white font-semibold pl-4 my-3" to="/transactions">
         <img className="w-10 h-10" src={img} alt="Transactions" />
         <p className="hidden md:block">Transactions</p>
       </NavLink>
 
-      <NavLink className="flex gap-2 items-center hover:bg-slate-200 font-semibold pl-4" to="/transfer">
+      <NavLink className="flex gap-2 items-center hover:bg-[#283382] hover:text-white font-semibold pl-4" to="/transfer">
         <img className="w-10 h-10" src={img2} alt="Transfer" />
         <p className="hidden md:block">Transfer</p>
       </NavLink>

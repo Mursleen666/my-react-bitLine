@@ -9,9 +9,15 @@ body {
   overflow-x: hidden;
 }
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
+
+a.active{
+        background-color: #283382;
+        color: white;
+        text-decoration: underline;
+    }
