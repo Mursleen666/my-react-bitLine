@@ -205,7 +205,7 @@ const Transaction = () => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-4 mb-11 flex flex-row items-center justify-between gap-4">
+      <div className="mt-4 mb-4 flex flex-row items-center justify-between gap-4">
         <div className="flex mb-6 items-center gap-2">
           <label className="hidden lg:block text-sm ">Items per page:</label>
           <select

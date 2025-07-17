@@ -72,8 +72,8 @@ const HomePage = () => {
   };
 
   return (
-    <div className="h-[500px] lg:h-[495px] lg:overflow-y-auto px-0 lg:px-6 mt-6 py-0 lg:py-4 bg-white text-gray-700">
-      <div className="min-h-screen bg-white mr-0 lg:mr-5 mb-0 lg:mb-7">
+    <div className="h-[500px] lg:h-[470px] lg:overflow-y-auto px-0 lg:px-6 mt-6 bg-white text-gray-700">
+      <div className="min-h-screen bg-white mr-0 lg:mr-5 mb-0 lg:mb-0">
         {/* Scrollable Cards Section (TOP) */}
         {/* Scrollable Cards Section (TOP) */}
         <div className="relative flex items-start mb-0 lg:mb-11">
@@ -147,9 +147,9 @@ const HomePage = () => {
 
 
         {/* Table Section (BOTTOM) */}
-        <div>
+        <div className="mb-5">
           <div className="flex-col lg:flex-row flex justify-between items-center mb-3">
-            <h2 className="mb-4 lg:mb-0 text-2xl font-bold">Live Transactions</h2>
+            <h2 className="mb-4 lg:mb-0 mt-6 text-2xl font-bold">Live Transactions</h2>
             <input
               type="text"
               placeholder="Search..."
@@ -259,8 +259,9 @@ const HomePage = () => {
             </>
           )}
         </div>
+           <Footer />
       </div>
-      <Footer />
+   
     </div>
   );
 };

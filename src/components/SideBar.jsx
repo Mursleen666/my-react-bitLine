@@ -5,7 +5,7 @@ import img2 from "../assets/img16.png";
 
 const SideBar = ({ openDepositModal, openTransactionModal }) => {
   return (
-    <div className="hidden lg:flex flex-col flex-shrink-0 basis-[17%] h-[492px] bg-[#f2f2f2]">
+    <div className="hidden lg:flex flex-col flex-shrink-0 basis-[17%] h-[494px] bg-[#f2f2f2]">
       <NavLink className="flex gap-3 items-center bg-[#283382] pl-8 py-3" to="/">
         <p className="hidden text-white text-[18px] font-bold md:block">Home</p>
       </NavLink>
