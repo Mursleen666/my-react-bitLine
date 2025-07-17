@@ -12,7 +12,7 @@ const NavBar = ({ token, setToken }) => {
       <div className="px-[10px] lg:px-[38px] py-2 flex justify-between items-center">
         {/* Logo */}
         <div>
-          <img className="w-32 lg:w-28" src={logo} alt="Logo" />
+          <img className="w-24 lg:w-28" src={logo} alt="Logo" />
         </div>
 
         {/* Dropdown */}
