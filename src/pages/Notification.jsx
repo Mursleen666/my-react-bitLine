@@ -98,7 +98,6 @@ const Notification = () => {
       {/* Fixed Header */}
       <div className="flex-shrink-0">
         <SubNavBar />
-       
       </div>
 
       {/* Scrollable Body */}

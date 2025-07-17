@@ -17,9 +17,9 @@ const Profile = () => {
     }
 
     return (
-        <div className='h-screen lg:h-[495px] flex flex-col'>
+        <div className='h-[600px] lg:h-[495px] flex flex-col'>
             <SubNavBar />
-            <div className="flex-1 overflow-y-auto px-0 bg-white">
+            <div className='flex-col overflow-y-auto px-0 bg-white'>
                 <NameLogoutNav />
                 <div>
                     <div className='ml-11 mt-8' >

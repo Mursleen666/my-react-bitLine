@@ -30,13 +30,13 @@ const NavBar = ({ token, setToken }) => {
               <div className="py-2">
                 <p className="px-4 py-2 text-sm text-gray-700 font-semibold">Ghana Test</p>
                 <hr className="my-1" />
-                <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to="/profile">
+                <NavLink className="block px-4 py-3 text-sm" to="/profile">
                   Profile
                 </NavLink>
-                <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to="/notifications">
+                <NavLink className="block px-4 py-3 text-sm" to="/notifications">
                   Notifications
                 </NavLink>
-                <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to="/security">
+                <NavLink className="block px-4 py-3 text-sm" to="/security">
                   Security
                 </NavLink>
                 <hr className="my-1" />
