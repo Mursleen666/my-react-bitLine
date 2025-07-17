@@ -49,7 +49,7 @@ const App = () => {
       ) : (
         <>
           <NavBar token={token} setToken={setToken} />
-          <div className="flex flex-1 w-full overflow-hidden">
+          <div className="flex flex-1 w-full ">
             <SideBar
               openDepositModal={openDepositModal}
               openTransactionModal={openTransactionModal}
