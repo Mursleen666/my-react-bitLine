@@ -46,7 +46,7 @@ const Transfer = () => {
   );
 
   return (
-    <div className="px-6 ">
+    <div className="px-0 lg:px-6 ">
       <div className=" mb-4 mt-6 flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
         <div>
           <label className="font-semibold text-gray-700 mr-5">Date:</label>
@@ -143,7 +143,7 @@ const Transfer = () => {
       </div>
 
       {/* Pagination */}
-      <div className=" mt-4 flex flex-row items-center mb-14 justify-between gap-4">
+      <div className=" mt-4 flex flex-row items-center mb-12 justify-between gap-4">
         <div className="flex items-center gap-2">
           <label className="hidden lg:block text-sm">Items per page:</label>
           <select

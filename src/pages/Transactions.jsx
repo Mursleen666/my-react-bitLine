@@ -67,7 +67,7 @@ const Transaction = () => {
   const handleNextPage = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
 
   return (
-    <div className=" px-6">
+    <div className="px-0 lg:px-6">
       {/* Top Filters */}
       <div className="mb-4 mt-7 flex flex-col lg:flex-row gap-5 items-start lg:items-center justify-between">
         <div>
@@ -205,7 +205,7 @@ const Transaction = () => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-4 mb-14 flex flex-row items-center justify-between gap-4">
+      <div className="mt-4 mb-11 flex flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <label className="hidden lg:block text-sm ">Items per page:</label>
           <select

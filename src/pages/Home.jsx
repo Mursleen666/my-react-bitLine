@@ -72,11 +72,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className="h-[500px] lg:h-[495px] lg:overflow-y-auto px-4 lg:px-6 mt-6 py-0 lg:py-6 bg-white text-gray-700">
+    <div className="h-[500px] lg:h-[495px] lg:overflow-y-auto px-0 lg:px-6 mt-0 py-0 lg:py-4 bg-white text-gray-700">
       <div className="min-h-screen bg-white mr-5 mb-0 lg:mb-7">
         {/* Scrollable Cards Section (TOP) */}
         {/* Scrollable Cards Section (TOP) */}
-        <div className="relative flex items-start mb-0 lg:mb-12">
+        <div className="relative flex items-start mb-0 lg:mb-11">
           {/* Left arrow */}
           <button
             onClick={scrollLeft}
@@ -148,8 +148,8 @@ const HomePage = () => {
 
         {/* Table Section (BOTTOM) */}
         <div>
-          <div className="flex-col lg:flex-row flex justify-between items-center mb-4">
-            <h2 className="mb-6 lg:mb-0 text-2xl font-bold">Live Transactions</h2>
+          <div className="flex-col lg:flex-row flex justify-between items-center mb-3">
+            <h2 className="mb-4 lg:mb-0 text-2xl font-bold">Live Transactions</h2>
             <input
               type="text"
               placeholder="Search..."
@@ -184,7 +184,7 @@ const HomePage = () => {
           ) : (
             <>
               {/* Table Rows */}
-              <div className="border border-t-0 rounded-b overflow-hidden">
+              <div className="border border-t-0 rounded-b h-[120px] overflow-y-auto overflow-hidden">
                 {paginatedData.map((item) => (
                   <div
                     key={item.id}

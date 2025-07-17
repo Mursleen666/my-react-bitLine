@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="hidden lg:h-[50px] text-black bg-white justify-between pl-0 items-center">
+    <div className="hidden lg:block h-[50px]  text-black bg-white justify-between pl-0 items-center">
       <ul className="flex items-center justify-start py-4 text-[11px] px-8 border-y-[1px]">
         <li>
           <a className=" text-[#657478] mr-6" href="">Custody</a>
