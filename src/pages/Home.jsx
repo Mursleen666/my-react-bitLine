@@ -72,8 +72,8 @@ const HomePage = () => {
   };
 
   return (
-    <div className="h-[500px] lg:h-[495px] lg:overflow-y-auto px-0 lg:px-6 mt-0 py-0 lg:py-4 bg-white text-gray-700">
-      <div className="min-h-screen bg-white mr-5 mb-0 lg:mb-7">
+    <div className="h-[500px] lg:h-[495px] lg:overflow-y-auto px-0 lg:px-6 mt-6 py-0 lg:py-4 bg-white text-gray-700">
+      <div className="min-h-screen bg-white mr-0 lg:mr-5 mb-0 lg:mb-7">
         {/* Scrollable Cards Section (TOP) */}
         {/* Scrollable Cards Section (TOP) */}
         <div className="relative flex items-start mb-0 lg:mb-11">
