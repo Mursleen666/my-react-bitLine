@@ -58,11 +58,38 @@ const Notification = () => {
               onClick={() => setSmsNotification("off")}
             />
           </div>
-          
-        </div>
-        
-      </div>
-      
+        </div> 
+         <div className="flex items-center gap-12">
+          <span className="text-gray-400 text-sm">SMS notification</span>
+          <div className="flex gap-2">
+            <ToggleButton
+              type="on"
+              selected={smsNotification === "on"}
+              onClick={() => setSmsNotification("on")}
+            />
+            <ToggleButton
+              type="off"
+              selected={smsNotification === "off"}
+              onClick={() => setSmsNotification("off")}
+            />
+          </div>
+        </div>  
+         <div className="flex items-center gap-12">
+          <span className="text-gray-400 text-sm">SMS notification</span>
+          <div className="flex gap-2">
+            <ToggleButton
+              type="on"
+              selected={smsNotification === "on"}
+              onClick={() => setSmsNotification("on")}
+            />
+            <ToggleButton
+              type="off"
+              selected={smsNotification === "off"}
+              onClick={() => setSmsNotification("off")}
+            />
+          </div>
+        </div>   
+      </div>   
     </div>
   );
 

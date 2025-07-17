@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { Pencil } from 'lucide-react';
 import passwordimg from '../assets/imgPassword.svg'
 import mobileimg from '../assets/imgMobile.svg'
-// import addressimg from '../assets/imgAddress.svg'
-// import accountimg from '../assets/imgAccount.svg'
+import addressimg from '../assets/myAdd.svg'
+import accountimg from '../assets/myAcc.svg'
 import imgiAuth from '../assets/imgiAuth.png'
 import imgiSms from '../assets/imgiSms.png'
 import SubNavBar from '../components/SubNavBar';
 import NameLogoutNav from '../components/NameLogoutNav';
 import Footer from '../components/Footer';
+import pass from '../assets/mockPass.svg'
+import add from '../assets/mockAdd.svg'
+import mobile from '../assets/mockMobile.svg'
 
 
 
@@ -95,7 +98,7 @@ const Security = () => {
           {/* Address */}
           <div className="flex items-center justify-between border-b pb-2">
             <div className="flex items-center gap-3">
-              <img className='w-4' src={""} alt="" />
+              <img className='w-4' src={addressimg} alt="" />
               <div>
                 <p className="font-semibold">Address</p>
                 <p className="text-sm text-gray-600">-</p>
@@ -109,7 +112,7 @@ const Security = () => {
           {/* Account Activation */}
           <div className="flex items-center justify-between border-b pb-2">
             <div className="flex items-center gap-3">
-              <img className='w-4' src={""} alt="" />
+              <img className='w-4' src={accountimg} alt="" />
               <div>
                 <p className="font-semibold">Account Activation</p>
                 <p className="text-sm text-gray-600">18/01/2025</p>
@@ -128,12 +131,13 @@ const Security = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-md max-w-md w-full relative">
             <h3 className="text-xl font-semibold mb-4 text-center">Edit Password</h3>
+             <img className='ml-[118px]' src={pass} alt="" />
 
             <label className="block mb-2 text-sm font-medium text-gray-700">Old password</label>
             <input
               type="password"
               className="w-full mb-2 p-2 border rounded border-red-500 bg-red-50"
-              placeholder="Enter your current password"
+              
             />
             <p className="text-red-600 text-sm mb-4">Please enter your current password</p>
 
@@ -141,14 +145,13 @@ const Security = () => {
             <input
               type="password"
               className="w-full mb-4 p-2 border rounded"
-              placeholder="Enter new password"
+            
             />
 
             <label className="block mb-2 text-sm font-medium text-gray-700">Confirm new password</label>
             <input
               type="password"
               className="w-full mb-4 p-2 border rounded"
-              placeholder="Confirm new password"
             />
 
             <div className="flex justify-end space-x-2">
@@ -171,21 +174,9 @@ const Security = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-md max-w-md w-full relative text-center">
             <h3 className="text-2xl font-bold mb-4">Update Phone Number</h3>
+              <img className='ml-[139px]' src={mobile} alt="" />
             <div className="flex justify-center mb-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 2h8a2 2 0 012 2v16a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2z"
-                />
-              </svg>
+          
             </div>
 
             <label className="block text-sm font-medium text-gray-700 mb-2">New phone number</label>
