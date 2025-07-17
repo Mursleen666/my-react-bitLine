@@ -1,72 +1,61 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import logo from "../assets/myLogo.svg"
+import logo from "../assets/myLogo.svg";
 import { NavLink } from 'react-router-dom';
 
-
 const NavBar = ({ token, setToken }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => setIsOpen(!isOpen);
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleDropdown = () => setIsOpen(!isOpen);
-
-    return (
+  return (
+    <div className="sticky top-0 z-50 bg-white border-b h-[50px] lg:h-[55px]">
+      <div className="px-[10px] lg:px-[38px] py-2 flex justify-between items-center">
+        {/* Logo */}
         <div>
-            <div id="header" className="h-[55px] border-b-2 lg:h-[70px]">
-                <div className="px-[10px] lg:px-[38px] py-2 flex justify-between items-center" id="innerheader">
-
-                    {/* Logo */}
-                    <div id="logo">
-                        <img className="w-35 lg:w-36" src={logo} alt="Logo" />
-                    </div>
-
-                    {/* Dropdown Menu */}
-                    {/* Dropdown Menu */}
-                    <div className="relative inline-block text-left">
-                        <button
-                            onClick={toggleDropdown}
-                            className="flex items-center gap-1 text-blue-900 font-medium text-[13px] hover:text-blue-800"
-                        >
-                            Ghana Test
-                            <ChevronDown className="w-4 h-4" />
-                        </button>
-
-                        {isOpen && (
-                            <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50 sm:w-56">
-                                <div className="py-2">
-                                    <p className="px-4 py-2 text-sm text-gray-700 font-semibold">Ghana Test</p>
-                                    <hr className="my-1" />
-                                   
-                                    <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to='/profile' >
-                                         Profile
-                                    </NavLink>
-                                      <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to='notifications' >
-                                          Notifications
-                                    </NavLink>  <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to='security' >
-                                         Security
-                                    </NavLink>
-                                   
-                                    <hr className="my-1" />
-                                    <button
-                                        onClick={() => {
-                                            localStorage.removeItem("token");
-                                            setToken("");
-                                        }}
-                                        className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100"
-                                    >
-                                        Logout
-                                    </button>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-
-
-                </div>
-            </div>
+          <img className="w-32 lg:w-28" src={logo} alt="Logo" />
         </div>
-    )
-}
 
-export default NavBar
+        {/* Dropdown */}
+        <div className="relative inline-block text-left">
+          <button
+            onClick={toggleDropdown}
+            className="flex items-center gap-1 text-blue-900 font-medium text-[13px] hover:text-blue-800"
+          >
+            Ghana Test
+            <ChevronDown className="w-4 h-4" />
+          </button>
+
+          {isOpen && (
+            <div className="absolute right-0 mt-2 w-48 sm:w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+              <div className="py-2">
+                <p className="px-4 py-2 text-sm text-gray-700 font-semibold">Ghana Test</p>
+                <hr className="my-1" />
+                <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to="/profile">
+                  Profile
+                </NavLink>
+                <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to="/notifications">
+                  Notifications
+                </NavLink>
+                <NavLink className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100" to="/security">
+                  Security
+                </NavLink>
+                <hr className="my-1" />
+                <button
+                  onClick={() => {
+                    localStorage.removeItem("token");
+                    setToken("");
+                  }}
+                  className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100"
+                >
+                  Logout
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NavBar;

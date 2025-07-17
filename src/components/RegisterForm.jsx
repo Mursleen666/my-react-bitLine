@@ -20,9 +20,9 @@ const RegisterForm = ({ goToLogin }) => {
           style={{
             width:
               step === 1 ? '0%' :
-              step === 2 ? '50%' :
-              step === 3 ? '100%' :
-              '0%',
+                step === 2 ? '50%' :
+                  step === 3 ? '100%' :
+                    '0%',
           }}
         />
         {/* Steps */}
@@ -34,8 +34,8 @@ const RegisterForm = ({ goToLogin }) => {
                   ${step === s
                     ? 'bg-blue-900 text-white'
                     : step > s
-                    ? 'bg-black text-white'
-                    : 'bg-gray-200 text-gray-500'
+                      ? 'bg-black text-white'
+                      : 'bg-gray-200 text-gray-500'
                   }`}
               >
                 {s}
@@ -105,15 +105,40 @@ const RegisterForm = ({ goToLogin }) => {
 
       {/* Step 3 */}
       {step === 3 && (
-        <form className="space-y-4 mb-4">
+        <form className="space-y-4 mb-4" onSubmit={(e) => { e.preventDefault(); goToLogin(); }}>
           <p className="text-gray-700 text-sm mb-2">Enter the code sent to your email address</p>
-          <input type="text" maxLength="6" placeholder=".   .   .   .   ." className="w-full p-2 border rounded tracking-widest text-center" />
+
+          {/* OTP / PIN Input Boxes */}
+          <div id="opt" className="flex justify-center gap-2">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <input
+                key={i}
+                type="text"
+                inputMode="numeric"
+                maxLength="1"
+                className="w-10 h-12 border rounded text-center text-xl tracking-widest focus:outline-none focus:ring-2 focus:ring-pink-600"
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (/^\d$/.test(value) && e.target.nextSibling) {
+                    e.target.nextSibling.focus();
+                  }
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Backspace" && !e.target.value && e.target.previousSibling) {
+                    e.target.previousSibling.focus();
+                  }
+                }}
+              />
+            ))}
+          </div>
+
           <div className="text-right text-sm text-blue-700 underline cursor-pointer">Resend code</div>
-          <button type="submit" onClick={goToLogin} className="w-full bg-pink-700 text-white py-2 rounded-full">Submit</button>
+          <button type="submit" className="w-full bg-pink-700 text-white py-2 rounded-full">Submit</button>
           <button type="button" onClick={prevStep} className="w-full border mt-2 py-2 rounded-full">Back</button>
         </form>
       )}
-    </div>
+
+    </div> 
   );
 };
 

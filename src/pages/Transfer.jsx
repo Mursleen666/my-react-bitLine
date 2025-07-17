@@ -3,6 +3,7 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import Footer from "../components/Footer";
 
 const dummyData = Array.from({ length: 57 }, (_, i) => ({
   id: i + 1,
@@ -45,8 +46,8 @@ const Transfer = () => {
   );
 
   return (
-    <div>
-      <div className="mb-4 flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+    <div className="px-6 ">
+      <div className=" mb-4 mt-6 flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
         <div>
           <label className="font-semibold text-gray-700 mr-5">Date:</label>
           <div className="inline-flex gap-4 mt-4">
@@ -91,8 +92,8 @@ const Transfer = () => {
       </div>
 
       <div className="w-full bg-white shadow overflow-hidden">
-        <div className="overflow-x-auto">
-          <div className="max-h-[400px] overflow-y-auto">
+        <div className="">
+          <div className="h-[540px] lg:max-h-[244px] overflow-y-auto">
             <div className="min-w-[600px]">
               <div className="bg-[#2062A0] text-white font-semibold grid grid-cols-3 p-4">
                 <div className="ml-14">Reference</div>
@@ -142,7 +143,7 @@ const Transfer = () => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-6 flex flex-row items-center justify-between gap-4">
+      <div className=" mt-4 flex flex-row items-center mb-14 justify-between gap-4">
         <div className="flex items-center gap-2">
           <label className="hidden lg:block text-sm">Items per page:</label>
           <select
@@ -190,7 +191,9 @@ const Transfer = () => {
             ⏭️
           </button>
         </div>
+        
       </div>
+      <Footer/>
     </div>
   );
 };

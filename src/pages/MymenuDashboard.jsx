@@ -1,5 +1,4 @@
 
-
 const MymenuDashboard = () => {
     return (
         <>
@@ -13,13 +12,7 @@ const MymenuDashboard = () => {
                     <div className=" bg-gray-50 pl-2 py-2">General Terms & Conditions</div>
                     <div className=" bg-gray-50 pl-2 py-2">Privacy Policy</div>
                     <div className=" bg-gray-50 pl-2 py-2">Digital Asset Pledge Agreement</div>
-                </div>
-
-
-
-
-              
-
+                </div>            
 
             </div>
         </>
