@@ -8,22 +8,22 @@ const LoginSignUpFooter = ({ onRegisterClick, onSignInClick }) => {
         <div className="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around py-2 lg:hidden shadow-md z-50">
 
 
-            <NavLink className={"flex flex-col items-center text-sm text-gray-700"}>
+            <Link className={"flex flex-col items-center text-sm text-gray-700"}>
                 <LogIn onClick={onSignInClick} size={24} />
                 <span>Sign in</span>
-            </NavLink>
+            </Link>
 
 
-            <NavLink className={"flex flex-col items-center text-sm text-gray-700"}>
+            <Link className={"flex flex-col items-center text-sm text-gray-700"}>
                 <UserPlus onClick={onRegisterClick} size={24} />
                 <span>Register</span>
-            </NavLink>
+            </Link>
 
 
-            <NavLink className={"flex flex-col items-center text-sm text-gray-700"} to="/menu">
+            <Link className={"flex flex-col items-center text-sm text-gray-700"} to="/menu">
                 <Menu size={24} />
                 <span>Menu</span>
-            </NavLink>
+            </Link>
 
         </div>
     );

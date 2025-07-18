@@ -160,7 +160,7 @@ const Transfer = () => {
           </select>
         </div>
 
-        <div className="flex items-center mb-6 gap-2">
+        <div className="flex items-center mb-6 lg:mb-12 gap-2">
           <button
             onClick={() => setCurrentPage(1)}
             disabled={currentPage === 1}
