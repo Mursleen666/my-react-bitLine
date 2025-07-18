@@ -28,7 +28,7 @@ const NavBar = ({ token, setToken }) => {
           {isOpen && (
             <div className="absolute right-0 mt-2 w-48 sm:w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
               <div className="py-2">
-                <p className="px-4 py-2 text-sm text-gray-700 font-semibold">Ghana Test</p>
+                <p className="px-4 py-2 text-sm text-gray-600 font-semibold">Ghana Test</p>
                 <hr className="my-1" />
                 <NavLink className="block px-4 py-3 text-sm" to="/profile">
                   Profile
