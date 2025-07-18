@@ -1,49 +1,53 @@
-import React, { useEffect, useState } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import CustomerPortal from './pages/CustomerPortal'
-import NavBar from './components/NavBar'
-import SideBar from './components/SideBar'
-import Transactions from './pages/Transactions'
-import Transfer from './pages/Transfer'
-import Home from './pages/Home'
-import MobileFooter from './components/FooterMobile'
-import MenuContent from './pages/MenuContent'
-import LoginSignUpFooter from './components/LoginSignUpFooter'
-import Footer from './components/Footer'
-import DepositModal from './components/DepositModal'
-import CreateTransactionModal from './components/CreateTransactionModal'
-import MymenuDashboard from './pages/MymenuDashboard'
-import Profile from './pages/Profile'
-import Security from './pages/Security'
-import Notification from './pages/Notification'
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+
+import CustomerPortal from './pages/CustomerPortal';
+import NavBar from './components/NavBar';
+import SideBar from './components/SideBar';
+import Transactions from './pages/Transactions';
+import Transfer from './pages/Transfer';
+import Home from './pages/Home';
+import MobileFooter from './components/FooterMobile';
+import MenuContent from './pages/MenuContent';
+import Footer from './components/Footer';
+import LoginSignUpFooter from './components/LoginSignUpFooter';
+import DepositModal from './components/DepositModal';
+import CreateTransactionModal from './components/CreateTransactionModal';
+import MymenuDashboard from './pages/MymenuDashboard';
+import Profile from './pages/Profile';
+import Security from './pages/Security';
+import Notification from './pages/Notification';
 
 const App = () => {
-  const [token, setToken] = useState("")
-  const [showDepositModal, setShowDepositModal] = useState(false)
-  const [showTransactionModal, setShowTransactionModal] = useState(false)
+  const [token, setToken] = useState('');
+  const [showDepositModal, setShowDepositModal] = useState(false);
+  const [showTransactionModal, setShowTransactionModal] = useState(false);
 
   useEffect(() => {
-    const savedToken = localStorage.getItem("token")
-    setToken(savedToken || "")
-  }, [])
+    const savedToken = localStorage.getItem('token');
+    setToken(savedToken || '');
+  }, []);
 
-  const location = useLocation()
-  const fullScreenRoutes = ['/profile', '/notifications', '/security']
-  const isFullScreen = fullScreenRoutes.includes(location.pathname)
+  const location = useLocation();
+  const fullScreenRoutes = ['/profile', '/notifications', '/security'];
+  const isFullScreen = fullScreenRoutes.includes(location.pathname);
 
-  const openDepositModal = () => setShowDepositModal(true)
-  const closeDepositModal = () => setShowDepositModal(false)
+  const openDepositModal = () => setShowDepositModal(true);
+  const closeDepositModal = () => setShowDepositModal(false);
 
-  const openTransactionModal = () => setShowTransactionModal(true)
-  const closeTransactionModal = () => setShowTransactionModal(false)
+  const openTransactionModal = () => setShowTransactionModal(true);
+  const closeTransactionModal = () => setShowTransactionModal(false);
 
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
-      {token === "" ? (
+      {token === '' ? (
         <>
           <Routes>
-            <Route path="/*" element={<CustomerPortal setToken={setToken} />} />
+            <Route path="/" element={<CustomerPortal setToken={setToken} />} />
+            <Route path="/login" element={<CustomerPortal setToken={setToken} />} />
+            <Route path="/register" element={<CustomerPortal setToken={setToken} />} />
             <Route path="/menu" element={<MenuContent />} />
+            <Route path="*" element={<CustomerPortal setToken={setToken} />} />
           </Routes>
         </>
       ) : (
@@ -54,7 +58,13 @@ const App = () => {
               openDepositModal={openDepositModal}
               openTransactionModal={openTransactionModal}
             />
-            <main className={`overflow-y-auto flex-grow ${isFullScreen ? 'w-full' : 'w-full lg:w-[70%] px-5 lg:px-0 mx-auto lg:ml-[max(1vw,15px)] mb-0 text-gray-600 text-base'}`}>
+            <main
+              className={`overflow-y-auto flex-grow ${
+                isFullScreen
+                  ? 'w-full'
+                  : 'w-full lg:w-[70%] px-5 lg:px-0 mx-auto lg:ml-[max(1vw,15px)] mb-0 text-gray-600 text-base'
+              }`}
+            >
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/transactions" element={<Transactions />} />
@@ -66,7 +76,7 @@ const App = () => {
               </Routes>
             </main>
           </div>
-        
+
           <MobileFooter />
 
           {/* Modals */}
@@ -75,7 +85,7 @@ const App = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

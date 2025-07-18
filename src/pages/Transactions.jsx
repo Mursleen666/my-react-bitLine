@@ -222,7 +222,7 @@ const Transaction = () => {
           </select>
         </div>
 
-        <div className="flex mb-6 items-center gap-2">
+        <div className="flex mb-12 lg:mb-6 items-center gap-2">
           <button
             onClick={handleFirstPage}
             disabled={currentPage === 1}
